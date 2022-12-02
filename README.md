@@ -3,7 +3,6 @@
 ## Overview
 
 The AIROC™ CYW20829 Bluetooth® LE SoC is a Bluetooth® 5.3 core spec-compliant for IoT, HID, smart home and industrial applications. It comes with the right combination of low power and high performance dual core Arm® Cortex® M33 to meet the high demands of Bluetooth® LE Applications.
-    
 
 
 
@@ -35,8 +34,6 @@ The BSP has a few hooks that allow its behavior to be configured. Some of these 
 
 Components:
 * Device specific category reference (e.g.: CAT1) - This component, enabled by default, pulls in any device specific code for this board.
-* BSP_DESIGN_MODUS - This component, enabled by default, causes the Configurator generated code for this specific BSP to be included. This should not be used at the same time as the CUSTOM_DESIGN_MODUS component.
-* CUSTOM_DESIGN_MODUS - This component, disabled by default, causes the Configurator generated code from the application to be included. This assumes that the application provides configurator generated code. This should not be used at the same time as the BSP_DESIGN_MODUS component.
 
 Defines:
 * CYBSP_WIFI_CAPABLE - This define, disabled by default, causes the BSP to initialize the interface to an onboard wireless chip if it has one.
@@ -50,7 +47,7 @@ Defines:
 | FLL      | IHO       | 96.0 MHz         |
 | CLK_HF0  | CLK_PATH0 | 96 MHz           |
 | CLK_HF1  | CLK_PATH0 | 96 MHz           |
-| CLK_HF2  | CLK_PATH0 | 96 MHz           |
+| CLK_HF2  | CLK_PATH2 | 48 MHz           |
 | CLK_HF3  | CLK_PATH1 | 24 MHz           |
 
 ### Power Configuration
@@ -79,4 +76,4 @@ See the [BSP API Reference Manual][api] for the complete list of the provided in
 [settings]: https://infineon.github.io/TARGET_CYW920829-VR/html/md_bsp_settings.html
 
 ---
-© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2019-2021.
+© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2019-2022.
