@@ -1,9 +1,8 @@
 /***********************************************************************************************//**
- * \file cybsp_hw_config.h
+ * \file cybsp_pm.h
  *
  * \brief
- * Basic API for handling defaults for hardware so code examples behave the same across different
- * devices.
+ * Basic API for setting up boards containing a Cypress MCU.
  *
  ***************************************************************************************************
  * \copyright
@@ -24,26 +23,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **************************************************************************************************/
+
 #pragma once
 
 #include "cy_result.h"
-#include "cybsp_types.h"
 
 #if defined(__cplusplus)
 extern "C" {
 #endif
 
-#ifndef CYBSP_USER_BTN_DRIVE
-#define CYBSP_USER_BTN_DRIVE          (CYHAL_GPIO_DRIVE_PULLDOWN)
-#endif
+/**
+ * \brief Register all PM callbacks, that are expected to be registered for the used device.
+ */
+cy_rslt_t cybsp_pm_callbacks_register(void);
 
-#ifndef CYBSP_DEBUG_UART_CTS
-#define CYBSP_DEBUG_UART_CTS (NC)
-#endif
-#ifndef CYBSP_DEBUG_UART_RTS
-#define CYBSP_DEBUG_UART_RTS (NC)
-#endif
-
-#if defined(__cplusplus)
+#ifdef __cplusplus
 }
-#endif
+#endif // __cplusplus

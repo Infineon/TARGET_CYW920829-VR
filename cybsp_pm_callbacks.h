@@ -1,9 +1,8 @@
 /***********************************************************************************************//**
- * \file cybsp_hw_config.h
+ * \file cybsp_pm_callbacks.h
  *
  * \brief
- * Basic API for handling defaults for hardware so code examples behave the same across different
- * devices.
+ * Basic API for setting up boards containing an Infineon MCU.
  *
  ***************************************************************************************************
  * \copyright
@@ -24,26 +23,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **************************************************************************************************/
+
 #pragma once
 
-#include "cy_result.h"
-#include "cybsp_types.h"
+#include "cy_syspm.h"
 
 #if defined(__cplusplus)
 extern "C" {
 #endif
 
-#ifndef CYBSP_USER_BTN_DRIVE
-#define CYBSP_USER_BTN_DRIVE          (CYHAL_GPIO_DRIVE_PULLDOWN)
-#endif
+/**
+ * \brief Get number of PM callbacks, that are available for specific BSP
+ * \param[out] arr_ptr  Pointer to store array of callback pointers
+ * \param[out] number_of_elements   Pointer to store number of elements in array of callback
+ * pointers
+ */
+void _cybsp_pm_callbacks_get_ptr_and_number(cy_stc_syspm_callback_t*** arr_ptr,
+                                            size_t* number_of_elements);
 
-#ifndef CYBSP_DEBUG_UART_CTS
-#define CYBSP_DEBUG_UART_CTS (NC)
-#endif
-#ifndef CYBSP_DEBUG_UART_RTS
-#define CYBSP_DEBUG_UART_RTS (NC)
-#endif
-
-#if defined(__cplusplus)
+#ifdef __cplusplus
 }
-#endif
+#endif // __cplusplus

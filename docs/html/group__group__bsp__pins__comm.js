@@ -11,7 +11,5 @@ var group__group__bsp__pins__comm =
     [ "CYBSP_QSPI_D0", "group__group__bsp__pins__comm.html#gaaea1a4ddc9aa57c45c4d6695b78ee878", null ],
     [ "CYBSP_QSPI_SCK", "group__group__bsp__pins__comm.html#ga2bae07a55adc9f31e828312bc8fbdd82", null ],
     [ "CYBSP_PDM_CLK", "group__group__bsp__pins__comm.html#gaee3607f958046ea444d57a2263c4b9a3", null ],
-    [ "CYBSP_PDM_DATA", "group__group__bsp__pins__comm.html#gaaf4f4f826f24c43f2b6985837f5b77ac", null ],
-    [ "CYBSP_DEBUG_UART_RTS", "group__group__bsp__pins__comm.html#gac5ec921782c5ee070ee018636606ccc3", null ],
-    [ "CYBSP_DEBUG_UART_CTS", "group__group__bsp__pins__comm.html#ga8dea402871bf0d6105885b2a504add7c", null ]
+    [ "CYBSP_PDM_DATA", "group__group__bsp__pins__comm.html#gaaf4f4f826f24c43f2b6985837f5b77ac", null ]
 ];

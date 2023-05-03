@@ -43,7 +43,7 @@
 #define flash_start_addr_cbus 0x08000000
 #define ram_start_addr_sahb 0x20000000
 #define ram_start_addr_cbus 0x04000000
-#define ram_end_addr_sahb 0x20020000
+#define ram_end_addr_sahb 0x20040000
 
 #ifndef APP_BOOTSTRAP_SIZE
 #define APP_BOOTSTRAP_SIZE 0x00002400
@@ -55,7 +55,6 @@
 ; The size of the stack section at the end of CM33 SRAM
 #define STACK_SIZE              0x00001000
 
-
 /* VMA for bootstrap Text */
 #define bootstrapText_vma ram_start_addr_cbus + ram_end_addr_sahb - ram_start_addr_sahb - BOOTSTRAP_SIZE /* 0x0401DC00 */
 /* Size of bootstrap section */
@@ -65,7 +64,7 @@
 #define bootstrapRamVect_vma ram_start_addr_sahb + STACK_SIZE /* 0x20001000 */
 
 /* VMA for flash */
-#define appText_vma flash_start_addr_cbus + BOOTSTRAP_SIZE + FLASH_ALIGNMENT_SIZE /* 0x08002600 */
+#define appText_vma flash_start_addr_cbus + BOOTSTRAP_SIZE + FLASH_ALIGNMENT_SIZE/* 0x08002600 */
 
 ; Cortex-M33 application flash area
 LR_1 bootstrapText_vma BOOTSTRAP_SIZE

@@ -51,8 +51,8 @@ define symbol FLASH_START_ADDR_SAHB         = 0x60000000;
 define symbol FLASH_START_ADDR_CBUS         = 0x08000000;
 define symbol RAM_START_ADDR_SAHB           = 0x20000000;
 define symbol RAM_START_ADDR_CBUS           = 0x04000000;
-define symbol RAM_END_ADDR_SAHB             = 0x20020000; /* 128K */
-define symbol RAM_END_ADDR_CBUS             = 0x04020000; /* 128K */
+define symbol RAM_END_ADDR_SAHB             = 0x20040000; /* 256K */
+define symbol RAM_END_ADDR_CBUS             = 0x04040000; /* 256K */
 define symbol FLASH_END_ADDR_SAHB           = 0x60080000; /* 512K */
 
 define symbol BOOTSTRAP_OFFSET_FLASH        = 0x00000050; /* toc2=0x10, l1_desc=0x1C, sign_header=0x20 */
@@ -60,7 +60,7 @@ define symbol RAMVECTORS_ALIGNMENT          = 512;
 define symbol FLASH_ALIGNMENT_SIZE          = 0x00000200;
 
 /* vma for bootstrap code region */
-define symbol CODE_VMA                      = RAM_START_ADDR_CBUS + RAM_END_ADDR_SAHB - RAM_START_ADDR_SAHB - BOOTSTRAP_SIZE; /* 0x0401DC00 */
+define symbol CODE_VMA                      = RAM_END_ADDR_SAHB - BOOTSTRAP_SIZE; /* 0x2003c600 */
 /* lma for bootstrap code region */
 define symbol CODE_LMA                      = FLASH_START_ADDR_SAHB + BOOTSTRAP_OFFSET_FLASH; /* 0x60000050 */
 /* Size of Bootstrap data */
@@ -72,15 +72,15 @@ define symbol DATA_BS_VMA                   = RAM_END_ADDR_SAHB - BOOTSTRAP_SIZE
 /* vma for app data region */
 define symbol DATA_VMA                      = RAM_START_ADDR_SAHB; /* 0x20000000 */
 /* app data size */
-define symbol DATA_SIZE                     = RAM_END_ADDR_SAHB - DATA_VMA - BOOTSTRAP_SIZE; /* 0x1DC00 */
+define symbol DATA_SIZE                     = RAM_END_ADDR_SAHB - DATA_VMA - BOOTSTRAP_SIZE; /* 0x3DC00 */
 /* vma for application XIP region */
-define symbol XIP_VMA                       = FLASH_START_ADDR_CBUS + BOOTSTRAP_SIZE + FLASH_ALIGNMENT_SIZE; /* 0x08002600 */
+define symbol XIP_VMA                       = FLASH_START_ADDR_SAHB + BOOTSTRAP_SIZE + FLASH_ALIGNMENT_SIZE; /* 0x60002600 */
 /* lma for application XIP region */
 define symbol XIP_LMA                       = FLASH_START_ADDR_SAHB + BOOTSTRAP_SIZE + FLASH_ALIGNMENT_SIZE; /* 0x60002600 */
 /* size of XIP region */
 define symbol XIP_SIZE                      = FLASH_END_ADDR_SAHB - XIP_LMA;
 /* Total size of SRAM */
-define symbol RAM_SIZE                      = RAM_END_ADDR_SAHB - RAM_START_ADDR_SAHB; /* 0x00020000 */
+define symbol RAM_SIZE                      = RAM_END_ADDR_SAHB - RAM_START_ADDR_SAHB; /* 0x00040000 */
 
 /* The symbols below define the location and size of blocks of memory in the target.
  * Use these symbols to specify the memory regions available for allocation.

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AIROC™ CYW20829 Bluetooth® LE SoC is a Bluetooth® 5.3 core spec-compliant for IoT, HID, smart home and industrial applications. It comes with the right combination of low power and high performance dual core Arm® Cortex® M33 to meet the high demands of Bluetooth® LE Applications.
+The AIROC™ CYW20829 Bluetooth® LE SoC is a Bluetooth® 5.4 core spec-compliant for IoT, HID, smart home and industrial applications. It comes with the right combination of low power and high performance dual core Arm® Cortex® M33 to meet the high demands of Bluetooth® LE Applications.
 
 
 
@@ -13,10 +13,10 @@ To use code from the BSP, simply include a reference to `cybsp.h`.
 ### Kit Features:
 
 * 32-bit CPU subsystem with Arm® Cortex® M33
-* 128-KB SRAM with power and data retention control
+* 256-KB SRAM with power and data retention control
 * Low power 1.7 - 3.6 V operation
 * Bluetooth® LE subsystem with 2.4GHz RF transceiver, Digital PHY and Programmable TX power
-* 16-bit SAR ADC with audio and DC measurement capability
+* ADCMic with Audio and DC measurement capability
 * Connectors for battery
 * 10-pin SWD connectors
 * Up to 26 programmable GPIOs
