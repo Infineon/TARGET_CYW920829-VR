@@ -15,18 +15,10 @@ To use code from the BSP, simply include a reference to `cybsp.h`.
 * 32-bit CPU subsystem with Arm® Cortex® M33
 * 256-KB SRAM with power and data retention control
 * Low power 1.7 - 3.6 V operation
-* Bluetooth® LE subsystem with 2.4GHz RF transceiver, Digital PHY and Programmable TX power
 * ADCMic with Audio and DC measurement capability
 * Connectors for battery
 * 10-pin SWD connectors
 * Up to 26 programmable GPIOs
-
-### Kit Contents:
-
-* CYW920829-VR Reference Remote board
-* USB-UART cable
-* MiniProg-4
-* Kit User Guide
 
 ## BSP Configuration
 
