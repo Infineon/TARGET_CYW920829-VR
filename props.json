@@ -1,12 +1,12 @@
 {
     "core": {
-        "version": "1.0.3.39794"
+        "version": "2.0.0.41755"
     },
     "opt": {
         "props": {
             "capabilities": [
                 "ble",
-                "bsp_gen4",
+                "bsp_gen5",
                 "bt",
                 "cat1",
                 "cat1b",
@@ -28,12 +28,12 @@
                 "sdhc",
                 "smart_io",
                 "sram_64k",
-                "std_crypto",
-                "switch"
+                "std_crypto"
             ],
             "dependencies": {
                 "core-lib": "latest-v1.X",
                 "core-make": "latest-v3.X",
+                "fw-cyw20829b0": "latest-v1.X",
                 "mtb-hal-cat1": "latest-v2.X",
                 "mtb-pdl-cat1": "latest-v3.X",
                 "recipe-make-cat1b": "latest-v2.X"
